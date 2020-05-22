@@ -1,0 +1,31 @@
+{
+  "name": "use-alpha-blended-color",
+  "version": "1.0.0",
+  "description": "Hook to blend the alpha channels of a color",
+  "main": "useAlphaBlendedColor.cjs.js",
+  "module": "useAlphaBlendedColor.es.js",
+  "types": "useAlphaBlendedColor.d.ts",
+  "author": "Derk-Jan Karrenbeld <derk-jan+github@karrenbeld.info>",
+  "license": "MIT",
+  "private": false,
+  "scripts": {
+    "build": "yarn build:module && yarn build:main && yarn build:dts",
+    "build:module": "yarn tsc --module es2015 --outDir build && move build\\useAlphaBlendedColor.js .\\useAlphaBlendedColor.es.js",
+    "build:main": "yarn tsc --module commonjs --outDir build && move build\\useAlphaBlendedColor.js .\\useAlphaBlendedColor.cjs.js",
+    "build:dts": "yarn tsc --declaration --declarationMap --emitDeclarationOnly"
+  },
+  "peerDependencies": {
+    "react": ">= 16.8"
+  },
+  "devDependencies": {
+    "@types/react": "^16.9.35",
+    "react": "~16.9.0",
+    "typescript": "^3.9.3"
+  },
+  "files": [
+    "useAlphaBlendedColor.cjs.js",
+    "useAlphaBlendedColor.es.js",
+    "useAlphaBlendedColor.d.ts",
+    "useAlphaBlendedColor.d.ts.map"
+  ]
+}

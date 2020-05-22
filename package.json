@@ -12,7 +12,8 @@
     "build": "yarn build:module && yarn build:main && yarn build:dts",
     "build:module": "yarn tsc --module es2015 --outDir build && move build\\useAlphaBlendedColor.js .\\index.es.js",
     "build:main": "yarn tsc --module commonjs --outDir build && move build\\useAlphaBlendedColor.js .\\index.cjs.js",
-    "build:dts": "yarn tsc --declaration --declarationMap --emitDeclarationOnly && move useAlphaBlendedColor.d.ts index.d.ts && move useAlphaBlendedColor.d.ts.map index.d.ts.map"
+    "build:dts": "yarn tsc --declaration --declarationMap --emitDeclarationOnly && move useAlphaBlendedColor.d.ts index.d.ts && move useAlphaBlendedColor.d.ts.map index.d.ts.map",
+    "prepublish": "yarn build"
   },
   "peerDependencies": {
     "react": ">= 16.8"

@@ -117,7 +117,7 @@ function normalizeToBytes(
 }
 
 function hexToByte(hex: string): number {
-  return parseInt(hex, 16) / 255;
+  return parseInt(hex, 16);
 }
 
 export function blend(
